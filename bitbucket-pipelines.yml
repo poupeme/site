@@ -16,7 +16,6 @@ pipelines:
 
     - step:
         name: Invalidate CloudFront
-        deployment: production
         script:
           - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION --paths /*
           
