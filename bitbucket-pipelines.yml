@@ -1,0 +1,13 @@
+image: node:8
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install -g s3-website
+          - npm install
+          - cp robots.txt ./dist
+          - cp sitemap.xml ./dist
+          - s3-website deploy ./src
