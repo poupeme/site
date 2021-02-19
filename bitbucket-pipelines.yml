@@ -17,5 +17,10 @@ pipelines:
     - step:
         name: Invalidate CloudFront
         script:
-          - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION --paths /*
-          
+          - pipe: atlassian/aws-cloudfront-invalidate:0.1.2
+            variables: 
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: 'us-east-2'
+              DISTRIBUTION_ID: $AWS_CLOUDFRONT_DISTRIBUTION
+              PATHS: '/*'
