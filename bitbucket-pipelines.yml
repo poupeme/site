@@ -13,4 +13,3 @@ pipelines:
               AWS_DEFAULT_REGION: 'us-east-2'
               S3_BUCKET: 'poupe-site'
               LOCAL_PATH: 'src'
-              ACL: 'public-read'
