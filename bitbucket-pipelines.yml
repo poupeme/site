@@ -1,3 +1,8 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
 image: node:8
 
 pipelines:
@@ -5,9 +10,6 @@ pipelines:
     - step:
         caches:
           - node
-        script:
+        script: # Modify the commands below to build your repository.
           - npm install -g s3-website
-          - npm install
-          - cp robots.txt ./dist
-          - cp sitemap.xml ./dist
           - s3-website deploy ./src
