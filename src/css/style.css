@@ -288,7 +288,7 @@ label {
 
 /* scrollUp */
 #scrollUp {
-  background: #3878ff;
+  background: #000000;
   height: 45px;
   width: 45px;
   right: 50px;
@@ -1987,7 +1987,7 @@ blockquote footer {
 }
 /* 17. preloader */
 #preloader {
-  background-color: #3878ff;
+  background-color: #fdbf45;
   height: 100%;
   width: 100%;
   position: fixed;
