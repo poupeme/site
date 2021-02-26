@@ -583,7 +583,10 @@ label {
   margin-bottom: 40px;
 }
 .description-img {
-  margin-left: -150px;
+  margin-left: -30px;
+}
+.description-img img {
+  width: 500px;
 }
 .features-area-wrap::before {
   content: "";
